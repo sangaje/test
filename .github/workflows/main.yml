@@ -27,6 +27,8 @@ jobs: # 실행할 작업을 정의
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions@github.com"
+          git fetch
+          git pull
           git add weather.csv
           git commit -m "Update weather data (auto)"
           git push
